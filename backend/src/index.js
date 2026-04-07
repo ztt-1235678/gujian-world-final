@@ -1,3 +1,10 @@
+// 在文件最开头添加
+const path = require('path');
+
+// 修改数据库路径（使用 /tmp 目录，Render 允许写入）
+const dbPath = process.env.NODE_ENV === 'production' 
+  ? '/tmp/database.sqlite' 
+  : path.join(__dirname, '../data/database.sqlite');
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
