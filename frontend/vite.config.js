@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [react()],
 
   // ✅ 【修复空白页核心】强制相对路径，解决本地打开找不到资源
-  base: './',
+  base: '/',
 
   server: {
     port: 3000,
